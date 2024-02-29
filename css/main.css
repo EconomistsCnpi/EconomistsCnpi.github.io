@@ -1,0 +1,113 @@
+/* Define o box-sizing para border-box em todos os elementos */
+/* Define o box-sizing para border-box em todos os elementos */
+/* Define o box-sizing para border-box em todos os elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Define a fonte Roboto usando @font-face */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url("../fonts/roboto/Roboto-Regular.ttf") format('truetype');
+}
+
+header {
+    margin-left: auto;
+}
+
+/* Define a fonte padrão, peso da fonte e tamanho da fonte para o corpo do documento */
+body {
+    font-family: Roboto, sans-serif; /* Usar a fonte Roboto e fallback para fontes genéricas do sistema */
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Estiliza as listas removendo a margem e o padding e exibindo os itens em linha com espaçamento entre eles */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    text-align: center; /* Alinha o texto centralmente */
+}
+
+.button-container {
+    margin-top: 10px; /* Adiciona espaço entre a barra de pesquisa e os botões */
+}
+
+/* Adicione estilos aos botões conforme necessário */
+.button-container button {
+    margin: 0 5px; /* Adiciona espaço entre os botões */
+}
+
+/* Remove a decoração de texto dos links e define a cor */
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* Estiliza o rodapé */
+footer {
+    background-color: #F2F2F2;
+    width: 100%;
+    padding: 10px;
+
+    /* Estiliza os links dentro do rodapé */
+    a {
+        color: #70757A;
+    }
+
+    /* Estiliza o parágrafo dentro do rodapé */
+    p {
+        padding: 10px;
+    }
+
+    /* Estiliza a navegação dentro do rodapé */
+    nav {
+        border-top: #DADCE0 1px solid;
+        padding: 10px;
+        display: none; /* Inicialmente oculta a navegação */
+
+        /* Estiliza as listas dentro da navegação */
+        ul {
+            display: flex;
+        }
+    }
+}
+
+/* Define as regras de mídia para telas maiores que 768px */
+@media (min-width: 768px) {
+    /* Altera a fonte do corpo do documento para Arial */
+    body {
+        font-family: Arial, sans-serif; /* Usar a fonte Arial e fallback para fontes genéricas do sistema */
+        font-weight: initial;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Exibe a navegação dentro do rodapé */
+    footer nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
